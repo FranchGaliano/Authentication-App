@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#main-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FAFAFB;
+}
+
+#card {
+    width: 475px;
+    /* height: 640px; */
+    border-radius: 24px;
+    border: 1px solid #BDBDBD;
+    padding: 3rem 4rem;
+}
+
+#dev-logo{
+    padding-bottom: 1.7rem;
+}
+
+#card-title-container {
+     padding-bottom: 0.9rem;
+     width: 310px;
+}
+
+#card-title-container > h2 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;    
+    letter-spacing: -0.63px;
+}
+
+#card-p-subtitle {
+    padding-bottom: 2rem;
+    width: 310px;
+}
+
+#card-p-subtitle > p {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.56px;
+}
+
+.input-box {
+    border-radius: 8px;
+    border: 1px solid #BDBDBD;
+    display: flex;
+    height: 48px;
+    padding: 10px;
+    gap: 10px;
+    margin-bottom: 0.9rem;    
+}
+
+.input-text {
+    width: 100%;
+    color: #828282;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.56px;
+    border: none;
+    outline: none;
+}
+
+.btn-input {
+    width: 100%;
+    height: 38px;
+    border-radius: 8px;
+    background: #2F80ED;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.56px;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#card > p {
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.49px;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#icons{
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+    padding-bottom: 1.7rem;
+}
+
+.btn-icons{
+    cursor: pointer;
+}
+
+a {
+    color: #2D9CDB;
+    text-decoration: none;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    width: 475px;
+    margin-top: 12px;
+    margin-bottom: 28px;
+}
+

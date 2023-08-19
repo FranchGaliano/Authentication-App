@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+   
+}
+
+#top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 72px;
+    background-color: #FAFAFB;
+}
+
+#dev-logo{
+    padding-bottom: 57px;
+}
+
+#user-menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    position: relative;
+    color: #333;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: -0.42px;
+}
+
+#user-menu > img {
+    height: 32px;
+    width: 32px;
+    border-radius: 20%;
+}
+
+.nav-icon {
+    height: 20px;
+    width: 20px;
+    margin-left: 12px;
+}
+
+#nav-menu {
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid #E0E0E0;
+    background: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+    padding: 14px 12px;
+    position: absolute;    
+    top: 90px;
+    right: 72px;
+}
+
+#nav-menu > ul {
+    list-style: none;
+}
+
+#nav-menu > ul > li {
+    width: 164px;
+    height: 40px;
+    border-radius: 8px;    
+}
+
+#nav-menu > ul > li > a {
+    width: 164px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gray-2, #4F4F4F);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.42px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#nav-menu > ul > li > a:hover {
+    background: #F2F2F2;
+}
+#nav-menu > ul > hr {
+    border-top: 1px solid #E0E0E0;
+    margin-top: 10px;
+
+}
+#nav-menu > ul > li > #logout {
+    color: var(--red, #EB5757);
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FAFAFB;
+}
+
+#header{
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 24px;
+    width: 846px;
+}
+
+#header > a > img {
+    height: 16px;
+    width: 16px;
+}
+
+#header > a {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.63px;
+    color: #2D9CDB;
+    text-decoration: none;
+}
+
+#card {
+    width: 846px;
+    border-radius: 12px;
+    border: 1px solid #E0E0E0;
+}
+
+.card-row {
+    padding: 12px 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+#card-top > h2 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.84px;
+    margin-top: 20px;
+}
+
+#card-top > p {
+    color: #828282;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.455px;
+}
+
+#card-photo {
+    padding: 12px 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+}
+
+#label-img {
+    display: block;
+    width: 72px;
+    height: 72px;
+    position: relative;
+}
+
+#card-photo > label > img:first-child {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;        
+    cursor: pointer;
+}
+
+#card-photo > label > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px; 
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+#card-photo > label > div > img {
+    width: 24px;
+    height: 24px;
+}
+
+#card-photo > p {
+    color: #828282;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.455px;
+    text-transform: uppercase;
+}
+
+.card-row > label {
+    color: #4F4F4F;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.455px;
+    padding: 4px;
+}
+
+.input-text {
+    width: 416px;
+    height: 52px;
+    border-radius: 12px;
+    border: 1px solid #828282;
+    color: #828282;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.455px;
+    padding: 17px;
+    background: #FAFAFB;
+    outline: none;
+}
+::placeholder { 
+    color: #BDBDBD;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.455px;
+ }
+
+#textarea {
+    height: 92px;
+    resize: none;
+}
+
+.btn-input {
+    width: 82px;
+    height: 38px;
+    border-radius: 8px;
+    background: #2F80ED;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.56px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    width: 846px;
+    margin-top: 14px;
+    margin-bottom: 28px;
+}
