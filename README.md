@@ -9,6 +9,9 @@ CREATE TABLE T_user (
     UNIQUE (user_email)
 );
 
-INSERT INTO t_user (user_email,user_password, user_fullname, user_bio, user_phone) VALUES ("galiano@outlook.com", "123", "Francesco Galiano", "System engineer, master of ceremonies, manager, photographer, teacher & coach.", "979 359 258");
 
-SELECT * FROM t_user WHERE user_email = '$email'
+Ususario:       galiano@outlook.com
+Contraseña:     01071986
+
+Ususario:       italogal@hotmail.com
+Contraseña:     qwerty

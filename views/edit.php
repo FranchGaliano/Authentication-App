@@ -66,7 +66,7 @@
         </div>
 
         <div id="card">
-            <div id="card-top" class="card-row" enctype="multipart/form-data" >
+            <div id="card-top" class="card-row">
                 <h2>Change Info</h2>
                 <p>Changes will be reflected to every services</p>
             </div>
@@ -101,8 +101,8 @@
                         value="<?= $data['user_email'] ? $data['user_email'] : ''; ?>"  />
                 </div>
                 <div class="card-row">
-                    <label for="password">Password</label> 
-                    <input type="password" class="input-text" placeholder="Enter your new password..." name="password"/>
+                    <label for="password_input">Password</label> 
+                    <input type="password" class="input-text" placeholder="Enter your new password..." name="password_input"/>
                 </div>
                 <?php
                     if(isset($_SESSION["error_message"])) {

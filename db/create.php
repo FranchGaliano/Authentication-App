@@ -1,13 +1,16 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["email"] !== "" && $_POST["password"] !== "") {
+if($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["email"] !== "" && $_POST["password_input"] !== "") {
     $email = $_POST["email"];
-    $password = $_POST["password"];
+    $password_input = $_POST["password_input"];
+
+
 
     require_once("connection.php");  
 
     try {
         // Encriptación de contraseña
-        $pass_encrypt = password_hash($password, PASSWORD_DEFAULT);
+        $pass_encrypt = password_hash($password_input, PASSWORD_DEFAULT);
+
 
         // Crear nuevo usuario con correo electrónico y contraseña encriptada
         $result = $mysqli->query("INSERT INTO t_user (user_email, user_password) 

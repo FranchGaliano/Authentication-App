@@ -46,7 +46,7 @@
                 <span class="input-icon">
                     <img src="/assets/images/lock.svg" alt="clave-icon">
                 </span>
-                <input type="password" class="input-text" placeholder="Password" name="password" required>
+                <input type="password" class="input-text" placeholder="Password" name="password_input" required>
             </div>
             <button type="submit" class="btn-input">Start coding now</button>
 

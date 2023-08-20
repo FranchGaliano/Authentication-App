@@ -1,6 +1,6 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["email"] !== "" && $_POST["password"] !== "") {
-    var_dump($_FILES); 
+if($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["email"] !== "" && $_POST["password_input"] !== "") {
+    //var_dump($_FILES); 
 
     try {
         require_once("connection.php");  
@@ -60,10 +60,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["email"] !== "" && $_POST["pa
             $mysqli->query("UPDATE t_user SET user_email='$email' WHERE user_id=$user_id;" );
         }
 
-        if (isset($_POST["password"]) && $_POST["password"] !== "" ) {
-            $password = $_POST["password"];
+        if (isset($_POST["password_input"]) && $_POST["password_input"] !== "" ) {
+            $password_input = $_POST["password_input"];
             // Encriptación de contraseña
-            $pass_encrypt = password_hash($password, PASSWORD_DEFAULT);
+            $pass_encrypt = password_hash($password_input, PASSWORD_DEFAULT);
             $mysqli->query("UPDATE t_user SET user_password='$pass_encrypt' WHERE user_id=$user_id;" );
         }
 
