@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["user_data"])) {
+        $_SESSION["error_message"] = "You are not logged in.";
+        header("Location: ../views/login.php");
+    } else {
+        $data = $_SESSION["user_data"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,16 +26,16 @@
         <nav >
             <div>
                 <a id="user-menu" href="#">
-                    <img src="https://picsum.photos/200" alt="foto">
-                    <span>Nombre Apellido</span>
+                    <img src="<?= $data["user_url_foto"] ? $data["user_url_foto"] : 'https://picsum.photos/200'; ?>" alt="foto">
+                    <span><?= $data["user_fullname"]; ?></span>
                     <img src="/assets/images/arrow_drop_down.svg" alt="icon-down">
                 </a>
             </div>
             <div id="nav-menu">
                 <ul>
                     <li>
-                        <a href="#">
-                        <img class="nav-icon" src="/assets/images/account-circle.svg" alt="profile-icon"> My Profile
+                        <a href="/views/edit.php">
+                        <img class="nav-icon" src="/assets/images/account-circle.svg" alt="profile-icon"> Edit Profile
                         </a>
                     </li>
                     <li> 
@@ -36,7 +45,7 @@
                     </li>
                     <hr>
                     <li>
-                        <a id="logout" href="#">
+                        <a id="logout" href="../db/logout.php">
                             <img class="nav-icon"  src="/assets/images/exit_to_app.svg" alt="exit-icon"> Logout
                         </a>
                     </li>
@@ -62,7 +71,7 @@
                     <p>Some info may be visible to other people</p>
                 </div>
                 <div id="card-top-right">
-                    <button>Edit</button>
+                    <a href="/views/edit.php">Edit</a>
                 </div>
             </div>
 
@@ -71,7 +80,19 @@
                     <p>Photo</p>
                 </div>
                 <div class="card-right">
-                    <img src="https://picsum.photos/200" alt="usuario">
+                    <img src="<?= $data["user_url_foto"] ? $data["user_url_foto"] : 'https://picsum.photos/200'; ?>" alt="foto">
+                    <?php
+                    if(isset($_SESSION["error_img"])) {
+                        ?> 
+                        <span class="error"> 
+                            <?php
+                            echo $_SESSION["error_img"];
+                            unset($_SESSION["error_img"]);
+                            ?>
+                        </span>
+                        <?php
+                    }
+                ?>
                 </div>
             </div>
             <div class="card-row">
@@ -79,7 +100,7 @@
                     <p>Name</p>
                 </div>
                 <div class="card-right">
-                    <p>Nombre Apellido</p>
+                    <p><?= $data["user_fullname"]; ?></p>
                 </div>
             </div>
             <div class="card-row">
@@ -87,7 +108,7 @@
                     <p>Bio</p>
                 </div>
                 <div class="card-right">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit..</p>
+                    <p><?= $data["user_bio"]; ?></p>
                 </div>
             </div>
             <div class="card-row">
@@ -95,7 +116,7 @@
                     <p>Phone</p>
                 </div>
                 <div class="card-right">
-                    <p>908249274292</p>
+                    <p><?= $data["user_phone"]; ?></p>
                 </div>
             </div>
             <div class="card-row">
@@ -103,7 +124,7 @@
                     <p>Email</p>
                 </div>
                 <div class="card-right">
-                    <p>galiano@outlook.com</p>
+                    <p><?= $data["user_email"]; ?></p>
                 </div>
             </div>
             <div class="card-row">
@@ -111,7 +132,7 @@
                     <p>Password</p>
                 </div>
                 <div class="card-right">
-                    <p>**************</p>
+                    <p>**********</p>
                 </div>
             </div>
 

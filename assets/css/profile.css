@@ -91,6 +91,7 @@
     margin-top: 10px;
 
 }
+
 #nav-menu > ul > li > #logout {
     color: var(--red, #EB5757);
     margin-top: 12px;
@@ -155,7 +156,12 @@
     letter-spacing: -0.455px;
 }
 
-#card-top-right > button {
+#card-top-right  {
+    display: flex;
+    align-items: center;
+}
+
+#card-top-right > a {
     width: 96px;
     height: 38px;
     border-radius: 12px;
@@ -165,6 +171,9 @@
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
@@ -174,6 +183,14 @@
     display: flex;
     align-items: center;
 }
+.error{
+    color: var(--red, #EB5757);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.49px;
+    margin-left: 48px;
+}
+
 .card-left {
     width: 230px;
     color: #BDBDBD;
@@ -192,7 +209,10 @@
 .card-right {
     font-size: 18px;
     font-weight: 500;
+    width: 520px;
     letter-spacing: -0.63px;
+    display: flex;
+    align-items: center;
 }
 
 

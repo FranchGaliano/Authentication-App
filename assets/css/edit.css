@@ -183,6 +183,7 @@
     align-items: center;
     border-radius: 8px; 
     background-color: rgba(0, 0, 0, 0.35);
+    cursor: pointer;
 }
 
 #card-photo > label > div > img {
@@ -229,6 +230,15 @@
 #textarea {
     height: 92px;
     resize: none;
+}
+
+.error{
+    color: var(--red, #EB5757);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.49px;
+    margin-left: 48px;
+    display: flex;
 }
 
 .btn-input {

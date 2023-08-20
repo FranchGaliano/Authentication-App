@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["user_data"])) {
+        $_SESSION["error_message"] = "You are not logged in.";
+        header("Location: ../views/login.php");
+    } else {
+        $data = $_SESSION["user_data"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +26,15 @@
         <nav >
             <div>
                 <a id="user-menu" href="#">
-                    <img src="https://picsum.photos/200" alt="foto">
-                    <span>Nombre Apellido</span>
+                    <img src="<?= $data["user_url_foto"] ? $data["user_url_foto"] : 'https://picsum.photos/200'; ?>" alt="foto">
+                    <span><?= $data["user_fullname"]; ?></span>
                     <img src="/assets/images/arrow_drop_down.svg" alt="icon-down">
                 </a>
             </div>
             <div id="nav-menu">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="/views/profile.php">
                         <img class="nav-icon" src="/assets/images/account-circle.svg" alt="profile-icon"> My Profile
                         </a>
                     </li>
@@ -36,7 +45,7 @@
                     </li>
                     <hr>
                     <li>
-                        <a id="logout" href="#">
+                        <a id="logout" href="../db/logout.php">
                             <img class="nav-icon"  src="/assets/images/exit_to_app.svg" alt="exit-icon"> Logout
                         </a>
                     </li>
@@ -49,55 +58,68 @@
 
     <div id="main-container">
         <div id="header">
-            <a href="views/profile.php">
+            <a href="/views/profile.php">
                 <img src="/assets/images/arrow_back.svg" alt="arrow-back-icon"> Back
             </a>
             
         </div>
 
         <div id="card">
-            <div id="card-top" class="card-row">
+            <div id="card-top" class="card-row" enctype="multipart/form-data" >
                 <h2>Change Info</h2>
                 <p>Changes will be reflected to every services</p>
             </div>
-            <form action="">
+            <form method="post" action="../db/update.php" enctype="multipart/form-data" >
                 <div id="card-photo">
                     <label for="img" id="label-img">
-                        <img src="https://picsum.photos/200" alt="usuario">
+                        <img src="<?= $data["user_url_foto"] ? $data["user_url_foto"] : 'https://picsum.photos/200'; ?>" alt="foto">
                         <div>
                             <img src="/assets/images/photo_camera.svg" alt="camera-icon">
                         </div>
                     </label>
-                    <input type="file" name="image" id="img" accept="image/*" hidden>
+                    <input type="file" name="image" id="img" accept="image/*" hidden >
                     <p>Change Photo</p>
                 </div>
                 <div class="card-row">
                     <label for="name">Name</label> 
-                    <input type="text" class="input-text" placeholder="Enter your name..." name="name"/>
+                    <input type="text" class="input-text" placeholder="Enter your name..." name="name"
+                        value="<?= $data['user_fullname'] ? $data['user_fullname'] : ''; ?>"  />
                 </div>
                 <div class="card-row">
                     <label for="bio">Bio</label> 
-                    <textarea id="textarea" class="input-text" placeholder="Enter your bio..." name="bio"></textarea>
+                    <textarea id="textarea" class="input-text" placeholder="Enter your bio..." name="bio" ><?= $data['user_bio'] ? $data['user_bio'] : ''; ?></textarea>
                 </div>
                 <div class="card-row">
                     <label for="phone">Phone</label> 
-                    <input type="number" class="input-text" placeholder="Enter your phone..." name="phone" />
+                    <input type="number" class="input-text" placeholder="Enter your phone..." name="phone" 
+                        value="<?= $data['user_phone'] ? $data['user_phone'] : ''; ?>"  />
                 </div>
                 <div class="card-row">
                     <label for="email">Email</label> 
-                    <input type="email" class="input-text" placeholder="Enter your email..." name="email" />
+                    <input type="email" class="input-text" placeholder="Enter your email..." name="email" 
+                        value="<?= $data['user_email'] ? $data['user_email'] : ''; ?>"  />
                 </div>
                 <div class="card-row">
                     <label for="password">Password</label> 
                     <input type="password" class="input-text" placeholder="Enter your new password..." name="password"/>
                 </div>
+                <?php
+                    if(isset($_SESSION["error_message"])) {
+                        ?> 
+                        <span class="error"> 
+                            <?php
+                            echo $_SESSION["error_message"];
+                            unset($_SESSION["error_message"]);
+                            ?>
+                        </span>
+                        <?php
+                    }
+                ?>
                 <div class="card-row">
-
                     <button type="submit" class="btn-input">Save</button>
                 </div>
             </form>
             
-
         </div>
         <footer>
             <p>created by <a href="https://linktr.ee/FrancescoGaliano">FrancescoGaliano</a></p>
