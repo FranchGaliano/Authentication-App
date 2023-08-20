@@ -55,6 +55,16 @@
     position: absolute;    
     top: 90px;
     right: 72px;
+    transition: transform .3s ease-in-out;
+    transform: translateY(-170%);
+}
+
+#nav-menu.mostrar {
+    transform: translateY(0);
+}
+
+.ocultar {
+    display: none;
 }
 
 #nav-menu > ul {

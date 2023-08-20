@@ -28,10 +28,11 @@
                 <a id="user-menu" href="#">
                     <img src="<?= $data["user_url_foto"] ? $data["user_url_foto"] : 'https://picsum.photos/200'; ?>" alt="foto">
                     <span><?= $data["user_fullname"]; ?></span>
-                    <img src="/assets/images/arrow_drop_down.svg" alt="icon-down">
+                    <img id="flecha-down" src="/assets/images/arrow_drop_down.svg" alt="icon-down">
+                    <img id="flecha-up" class="ocultar" src="/assets/images/arrow_drop_up.svg" alt="icon-up">
                 </a>
             </div>
-            <div id="nav-menu">
+            <div id="nav-menu" class="">
                 <ul>
                     <li>
                         <a href="/views/edit.php">
