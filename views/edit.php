@@ -98,11 +98,11 @@
                 <div class="card-row">
                     <label for="email">Email</label> 
                     <input type="email" class="input-text" placeholder="Enter your email..." name="email" 
-                        value="<?= $data['user_email'] ? $data['user_email'] : ''; ?>"  />
+                        value="<?= $data['user_email'] ? $data['user_email'] : ''; ?>" required />
                 </div>
                 <div class="card-row">
                     <label for="password_input">Password</label> 
-                    <input type="password" class="input-text" placeholder="Enter your new password..." name="password_input"/>
+                    <input type="password" class="input-text" placeholder="Enter your new password..." name="password_input" required />
                 </div>
                 <?php
                     if(isset($_SESSION["error_message"])) {

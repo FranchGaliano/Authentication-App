@@ -10,11 +10,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["email"] !== "" && $_POST["pa
         if ($consulta -> num_rows === 1) {    
             $data = $consulta -> fetch_assoc();
             $pass_encrypt = $data["user_password"];
-            var_dump($password_input);
-            var_dump($pass_encrypt);
 
             $verify = password_verify($password_input, $pass_encrypt);
-            var_dump($verify);
 
             if($verify) {
                 session_start();

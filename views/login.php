@@ -35,14 +35,14 @@
                 <span class="input-icon">
                     <img src="/assets/images/mail.svg" alt="email-icon" /> 
                 </span>
-                <input type="email" class="input-text" placeholder="Email" name="email" />
+                <input type="email" class="input-text" placeholder="Email" name="email" required />
             </div>
 
             <div class="input-box">
                 <span class="input-icon">
                     <img src="/assets/images/lock.svg" alt="clave-icon" />
                 </span>
-                <input type="password" class="input-text" placeholder="Password" name="password_input" />
+                <input type="password" class="input-text" placeholder="Password" name="password_input" required />
             </div>
             <button type="submit" class="btn-input">Start coding now</button>
             <p>or continue with these social profile</p>

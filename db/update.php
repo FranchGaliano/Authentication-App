@@ -1,6 +1,5 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] === "POST" && $_POST["email"] !== "" && $_POST["password_input"] !== "") {
-    //var_dump($_FILES); 
 
     try {
         require_once("connection.php");  
