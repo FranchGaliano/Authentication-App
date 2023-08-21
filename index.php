@@ -9,12 +9,12 @@
     <title>Register</title>
     
 </head>
-<body >
+<body>
 
     <div id="main-container" class="" >
 
-    <label for="chk-dark-light-mode" id="lbl-dark-light-mode"><img src="/assets/images/dark_mode.svg" alt="dark-icon"></label>
-    <input type="checkbox" id="chk-dark-light-mode" />
+        <label for="chk-dark-light-mode" id="lbl-dark-light-mode"><img src="/assets/images/dark_mode.svg" alt="dark-icon"></label>
+        <input type="checkbox" id="chk-dark-light-mode" />
 
         <form id="card" method="post" action="/db/create.php" >
             <div id="dev-logo">

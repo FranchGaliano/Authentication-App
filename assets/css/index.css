@@ -167,7 +167,7 @@ footer > p > a {
     transition: all 0.8s ease;
 }
 
-.input-text.dark {
+.dark .input-text {
     background-color: #252329;
     transition: all 0.8s ease;
 }
