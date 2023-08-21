@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <script src="/js/dark.js" defer></script>
+    <script src="/js/darkRegister.js" defer></script>
     <title>Register</title>
     
 </head>

@@ -13,15 +13,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/assets/css/profile.css" />
+    <link rel="stylesheet" href="/assets/css/profile.css" />    
     <script src="/js/main.js" defer></script>
+    <script src="/js/darkProfile.js" defer></script>
     
     <title>Profile</title>
 
 </head>
 <body>
-<div id="top-header">
-        <img id="dev-logo" src="/assets/images/devchallenges.svg" alt="devchallenges icon">
+    <div id="top-header" class="">
+        <div id="dev-logo">
+            <img src="/assets/images/devchallenges.svg" alt="devchallenges icon">
+        </div>
 
         <nav >
             <div>
@@ -56,8 +59,13 @@
 
     </div>
 
-    <div id="main-container">
-        <div id="header">
+    <div id="main-container"  class="" >
+
+        <label for="chk-dark-light-mode" id="lbl-dark-light-mode"><img src="/assets/images/dark_mode.svg" alt="dark-icon"></label>
+        <input type="checkbox" id="chk-dark-light-mode" />
+
+
+        <div id="header" class="">
             <h1>Personal info</h1>
             <p>Basic info, like your name and photo</p>
         </div>
@@ -128,7 +136,7 @@
                     <p><?= $data["user_email"]; ?></p>
                 </div>
             </div>
-            <div class="card-row">
+            <div id="card-last-row">
                 <div class="card-left">
                     <p>Password</p>
                 </div>
