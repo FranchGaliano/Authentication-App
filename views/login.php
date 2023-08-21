@@ -55,7 +55,7 @@
             <p>Don’t have an account yet? <a href="/index.php">Register</a> </p>
         </form>
         <footer>
-            <p>created by <a href="https://linktr.ee/FrancescoGaliano">FrancescoGaliano</a></p>
+            <p>created by <a href="https://linktr.ee/FrancescoGaliano"><b>FrancescoGaliano</b></a></p>
             <p>devChallenges.io</p>
         </footer>
     </div>

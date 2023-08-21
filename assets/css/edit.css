@@ -274,3 +274,10 @@ footer{
     margin-top: 14px;
     margin-bottom: 28px;
 }
+footer > p {
+    color: #828282;
+}
+footer > p > a {
+    color: #828282;
+    text-decoration: underline;
+}
