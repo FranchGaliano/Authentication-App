@@ -281,3 +281,70 @@ footer > p > a {
     color: #828282;
     text-decoration: underline;
 }
+
+
+
+/* Modo oscuro */
+
+#chk-dark-light-mode {
+    display: none;
+}
+
+#lbl-dark-light-mode{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    border: 1px solid #828282;
+    border-radius: 50%;
+    padding: 7px;
+}
+
+#main-container.dark {
+    background-color: #252329;
+    transition: all 0.8s ease;
+}
+
+#top-header.dark {
+    background-color: #252329;
+    transition: all 0.8s ease;   
+}
+
+#user-menu.dark {
+    color:#E0E0E0;
+    transition: all 0.8s ease;
+}
+
+#nav-menu.dark {
+    background-color: #252329;
+    transition: all 0.8s ease;
+}
+
+
+#card-top.dark {
+    color:#E0E0E0;
+    transition: all 0.8s ease;
+}
+
+.dark .input-text {
+    background-color: #252329;
+    color: #BDBDBD;
+    transition: all 0.8s ease;
+}
+
+.dark ::placeholder { 
+    color:  #4F4F4F;
+
+ }
+
+
+
+.dark > form > div > label {
+    color:#828282;
+    transition: all 0.8s ease;
+}
+
+
+

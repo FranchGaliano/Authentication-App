@@ -15,13 +15,16 @@
 
     <link rel="stylesheet" href="/assets/css/edit.css" />
     <script src="/js/main.js" defer></script>
+    <script src="/js/darkEdit.js" defer></script>
 
     <title>Change Info</title>
 
 </head>
 <body>
-    <div id="top-header">
-        <img id="dev-logo" src="/assets/images/devchallenges.svg" alt="devchallenges icon">
+    <div id="top-header" class="">
+        <div id="dev-logo">
+            <img src="/assets/images/devchallenges.svg" alt="devchallenges icon">
+        </div>
 
         <nav >
             <div>
@@ -56,20 +59,24 @@
 
     </div>
 
+    <div id="main-container" class="">
 
-    <div id="main-container">
+        <label for="chk-dark-light-mode" id="lbl-dark-light-mode"><img src="/assets/images/dark_mode.svg" alt="dark-icon"></label>
+        <input type="checkbox" id="chk-dark-light-mode" />
+
+
         <div id="header">
             <a href="/views/profile.php">
                 <img src="/assets/images/arrow_back.svg" alt="arrow-back-icon"> Back
-            </a>
-            
+            </a>            
         </div>
 
-        <div id="card">
+        <div id="card" class="">
             <div id="card-top" class="card-row">
                 <h2>Change Info</h2>
                 <p>Changes will be reflected to every services</p>
             </div>
+
             <form method="post" action="../db/update.php" enctype="multipart/form-data" >
                 <div id="card-photo">
                     <label for="img" id="label-img">

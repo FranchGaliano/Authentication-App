@@ -25,4 +25,4 @@ Funcionalidades:
 
 - Barra de navegación con movimiento y amigable.
 
-- MODO OSCURO para el index (Register), con ícono intercambiable.
+- MODO OSCURO para Register (index), Login, Profile y Edit con ícono intercambiable luna y sol.
